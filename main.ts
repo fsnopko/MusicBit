@@ -202,7 +202,6 @@ input.onLogoEvent(TouchButtonEvent.Touched, function () {
     basic.showString("Koniec.")
     basic.showIcon(IconNames.Happy)
 })
-input.setSoundThreshold(SoundThreshold.Loud, 150)
 music.setVolume(255)
 basic.showString("Ahoj!")
 basic.showLeds(`
