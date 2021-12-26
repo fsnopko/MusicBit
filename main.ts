@@ -1,8 +1,3 @@
-input.onLogoEvent(TouchButtonEvent.LongPressed, function () {
-    basic.showString("Music:Bit by Filip Snopko")
-    basic.showString("Serial nm.:" + control.deviceSerialNumber())
-    basic.showString("Name:" + control.deviceName())
-})
 input.onButtonPressed(Button.A, function () {
     basic.showLeds(`
         # . # . #
@@ -181,6 +176,13 @@ input.onButtonPressed(Button.AB, function () {
     basic.showString("End")
     basic.showIcon(IconNames.Happy)
 })
+input.onSound(DetectedSound.Loud, function () {
+    basic.clearScreen()
+    basic.showString("Music:Bit by Filip Snopko")
+    basic.showString("Serial nm.:" + control.deviceSerialNumber())
+    basic.showString("Name:" + control.deviceName())
+    basic.showIcon(IconNames.Happy)
+})
 input.onButtonPressed(Button.B, function () {
     basic.showLeds(`
         . . . . .
@@ -207,6 +209,7 @@ input.onLogoEvent(TouchButtonEvent.Touched, function () {
     basic.showString("Koniec.")
     basic.showIcon(IconNames.Happy)
 })
+input.setSoundThreshold(SoundThreshold.Loud, 150)
 music.setVolume(255)
 basic.showString("Ahoj!")
 basic.showLeds(`
