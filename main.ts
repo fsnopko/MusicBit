@@ -259,8 +259,4 @@ basic.showLeds(`
     . # . # .
     . . # . .
     `)
-basic.clearScreen()
-basic.showString("Music:Bit by Filip Snopko")
-basic.showString("Serial nm.:" + control.deviceSerialNumber())
-basic.showString("Name:" + control.deviceName())
 basic.showIcon(IconNames.Happy)
